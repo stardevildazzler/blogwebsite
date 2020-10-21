@@ -1,0 +1,28 @@
+{% extends "basic.html" %}
+
+{% block title %}
+blogpage
+{% endblock title %}
+
+{% block body %}
+{% for i in  blog%}
+
+<div class="container">
+  <div class="starter-template text-justify  my-4 ">
+
+    <h1 class=" text-center text-uppercase">{{i.blogname}}</h1><br>
+    <h><b>{{i.blogtitle}}</b></h>
+    <p class="lead">{{i.text |safe}}</p>
+  </div>
+
+  
+
+  </div>
+</div>
+
+
+{% endfor %}
+
+
+
+{% endblock body %}

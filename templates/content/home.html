@@ -1,0 +1,34 @@
+{% extends "basic.html" %}
+
+{% block title %}
+home
+{% endblock title %}
+{% block homeactive %}
+active{% endblock homeactive %}
+{% block body %}
+{% if messages %}
+{% for  message in messages %}
+<div class="alert alert-{{message.tags}}" role="alert">
+  {{message}}
+  {% endfor %}
+</div>{% endif %}
+
+<div class="container">
+  <div class="row">
+    <div class="jumbotron bghome text-white rounded my-4 ">
+      <div class=" col-5">
+        <h1 class="display-4 "><b>Hello, Dazzler!</b></h1>
+        <p class="lead "><b> it is my first blog site, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</b></p>
+      </div>
+
+      <div>
+        <hr class="my-4">
+        <p><b>It uses utility classes for typography and spacing to space content out within the larger container.</b>
+        </p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
